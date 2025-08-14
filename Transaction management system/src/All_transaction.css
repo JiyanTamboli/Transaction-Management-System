@@ -1,0 +1,93 @@
+/* Container styling */
+.tcontainer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Table container with scroll */
+.table-responsive {
+  max-height: 500px; /* 👈 vertical scroll height */
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.table thead th {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  padding: 12px;
+  position: sticky;        /* 👈 sticky header */
+  top: 0;
+  z-index: 1;
+}
+
+.table tbody td {
+  vertical-align: middle;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Credit = green, Debit = red */
+.table tbody tr td:nth-child(3):not(:empty) {
+  background-color: #e6f9ec;
+}
+
+.table tbody tr td:nth-child(4):not(:empty) {
+  background-color: #fdeaea;
+}
+
+/* Buttons */
+button {
+  font-size: 14px;
+}
+
+/* Status badge styling */
+.status-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+}
+
+.status-badge.paid {
+  background-color: #28a745;
+}
+
+.status-badge.pending {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .table-responsive {
+    max-height: 400px; /* smaller scroll height */
+  }
+
+  .table thead th {
+    font-size: 13px;
+  }
+
+  .table tbody td {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+  

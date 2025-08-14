@@ -1,0 +1,249 @@
+/* FontAwesome Required */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  padding: 20px;
+  margin: 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.dashboard-card {
+  flex: 1 1 calc(25% - 20px);
+  border: 2px solid black;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.card-top {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.card-info p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card-icon i {
+  font-size: 2rem;
+}
+
+/* Footer */
+.card-bottom {
+  padding: 12px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Color Themes */
+.yellow .card-top,
+.yellow .card-bottom {
+  background-color: #ffb300;
+}
+
+.red .card-top,
+.red .card-bottom {
+  background-color: #ef5350;
+}
+
+.green .card-top,
+.green .card-bottom {
+  background-color: #26a69a;
+}
+
+.blue .card-top,
+.blue .card-bottom {
+  background-color: #1e88e5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .dashboard-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* table */
+.tables-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card wrapper */
+.table-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scroll view container */
+.table-container {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+/* Table styles */
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Sticky header */
+.transactions-table thead {
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Table cells */
+.transactions-table th,
+.transactions-table td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Row hover */
+.transactions-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Sort arrow */
+.sort-arrow {
+  font-size: 12px;
+  margin-left: 5px;
+  color: #888;
+}
+
+/* Status styles */
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-size: 13px;
+}
+
+.status.pending {
+  background-color: #d3d7e3;
+  color: #2f3545;
+}
+
+.status.paid {
+  background-color: #b4f1c3;
+  color: #195c33;
+}
+
+/* Table color themes */
+.table-card.orange {
+  background-color: #fff7f0;
+}
+
+.table-card.red {
+  background-color: #fff2f2;
+}
+
+/* Optional: customize scrollbars */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.table-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.table-header {
+  padding: 10px 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* MODEL BUTTOS */
+/* Wrap the buttons in a container */
+.modal-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+/* Optional: Improve button appearance */
+.modal-button-group .btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effects */
+.modal-button-group .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Distinct colors if you want */
+.modal-button-group .btn-credit {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.modal-button-group .btn-debit {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}

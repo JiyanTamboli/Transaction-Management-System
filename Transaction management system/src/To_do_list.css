@@ -1,0 +1,51 @@
+.todo-container {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.task-input {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.input-group .btn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.task-item {
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.task-item:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.01);
+}
+
+.task-text {
+  flex-grow: 1;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.task-text:hover {
+  color: #0d6efd;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.delete-btn {
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ffdddd;
+}
